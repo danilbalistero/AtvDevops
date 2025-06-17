@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar o repositório
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Configurar Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Build da imagem Docker
-        run: docker build -t your-image-name .
+        run: docker build -t hello-world-node .
 
       - name: Finalizar
-        run: echo "Build completed successfully!"
+        run: echo "Build concluído. Render detectará o push e fará o deploy automaticamente."
